@@ -1,0 +1,30 @@
+{
+  "name": "next-ts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "install": "^0.13.0",
+    "js-sha256": "^0.9.0",
+    "next": "^9.2.2",
+    "node-sass": "^4.13.1",
+    "npm": "^6.13.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
+    "typescript": "^3.8.2"
+  }
+}

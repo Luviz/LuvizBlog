@@ -1,0 +1,75 @@
+$paddingsize: 150px !default;
+$break-small: 450px;
+$break-large: 1000px;
+
+@media screen and (max-width: 320px) {
+  $paddingsize: 200px;
+}
+@media screen and (min-width: 1200px) {
+  $paddingsize: 100px;
+}
+
+// @media screen and (max-width: 400px) {
+// }
+// @media screen and (min-width: 1000px) {
+// }
+
+:root {
+  background-color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#__next {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  @media screen and (max-width: $break-small) {
+    grid-template-columns: 0% auto 0%;
+  }
+  @media screen and (min-width: $break-large) {
+    grid-template-columns: 20% auto 20%;
+  }
+}
+
+.layout {
+  background-color: #a8a8a8;
+  grid-column-start: 2;
+  .container {
+    padding: 10px;
+  }
+}
+
+.topNav {
+  background-color: #636363;
+  padding: 3px 0px;
+  a {
+    @mixin navFocus {
+      background-color: #a8a8a8;
+      background: rgb(140, 140, 140);
+      background: linear-gradient(
+        0deg,
+        rgba(168, 168, 168, 1) 5%,
+        rgba(181, 181, 181, 0.5) 35%,
+        rgba(140, 140, 140, 0) 91%
+      );
+    }
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 0px 10px 4px 10px;
+    &.active {
+      @include navFocus();
+    }
+    &:focus {
+        @include navFocus();
+      }
+    &:hover {
+      @include navFocus();
+    }
+  }
+}
+
+.test {
+  background-color: cyan;
+}
